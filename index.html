@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: transparent; /* Fundo transparente para o OBS */
+        }
+
+        #caixa-padeiro {
+            position: absolute;
+            width: 200px; /* Tamanho do seu Padeirinho */
+            height: 200px;
+            animation: bounceX 5s linear infinite alternate, 
+                       bounceY 3.4s linear infinite alternate;
+        }
+
+        #caixa-padeiro img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Movimento Horizontal */
+        @keyframes bounceX {
+            from { left: 0; }
+            to { left: calc(100vw - 200px); }
+        }
+
+        /* Movimento Vertical */
+        @keyframes bounceY {
+            from { top: 0; }
+            to { top: calc(100vh - 200px); }
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa-padeiro">
+        <img src="https://i.ibb.co/pBTg3fC/sr-padeiro.png" alt="Sr. Padeiro">
+    </div>
+</body>
+</html>
