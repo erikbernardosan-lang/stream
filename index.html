@@ -7,32 +7,39 @@
             padding: 0;
             overflow: hidden;
             background-color: transparent; /* Fundo transparente para o OBS */
+            
+            /* CONFIGURAÇÃO DA BORDA */
+            box-sizing: border-box;
+            border: 15px solid #6A0DAD; /* Borda Roxa de 15px */
+            height: 100vh;
+            width: 100vw;
         }
 
         #caixa-padeiro {
             position: absolute;
-            width: 200px; /* Tamanho do seu Padeirinho */
+            width: 200px; /* Tamanho da área do Padeirinho */
             height: 200px;
+            /* Animação ajustada para considerar a borda de 15px */
             animation: bounceX 5s linear infinite alternate, 
                        bounceY 3.4s linear infinite alternate;
         }
 
         #caixa-padeiro img {
-            width: 180%;
-            height: 150%;
+            width: 100%; /* Ajustado para caber na caixa sem cortar */
+            height: 100%;
             object-fit: contain;
         }
 
-        /* Movimento Horizontal */
+        /* Movimento Horizontal (Considerando bordas de 15px) */
         @keyframes bounceX {
-            from { left: 0; }
-            to { left: calc(100vw - 200px); }
+            from { left: 15px; }
+            to { left: calc(100vw - 215px); } /* Largura (200) + Borda (15) */
         }
 
-        /* Movimento Vertical */
+        /* Movimento Vertical (Considerando bordas de 15px) */
         @keyframes bounceY {
-            from { top: 0; }
-            to { top: calc(100vh - 200px); }
+            from { top: 15px; }
+            to { top: calc(100vh - 215px); } /* Altura (200) + Borda (15) */
         }
     </style>
 </head>
